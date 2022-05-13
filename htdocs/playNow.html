@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Brain Rush </title>
+	<meta charset="UTF-8">
+	<meta name="author" content="ORDONA, Victoria Alexandra I.">
+	<meta name="keywords" content="Play, Brain, Rush"> 
+	<meta name="revised" content="13-05-2022">
+	<link rel="icon" href="../images/icons/brainRush.png" type="image/png"> 
+	<link rel="stylesheet" type="text/css" href="../css/brainRush.css">
+	<link rel="stylesheet" type="text/css" href="../css/playNow.css">
+</head>
+<body>
+
+<header>
+<div id = "header">
+	<div id = "user">
+		<div id = "userBody">
+			<div id = "userHead">
+				<div class = "eyes" id = "leftEye"> </div>
+				<div class = "eyes" id = "rightEye"> </div>
+			</div>
+		</div>
+	</div>
+
+	<p id = "leftText" onclick = "openCustom();"> Customize Your Avatar </p>
+	<a href = "https://www.facebook.com/victoria.ordona.501/" target = "blank"> <div class = "socialLinks" id = "facebook"> </div> </a>
+	<a href = "https://www.instagram.com/victxria.xrdxna/" target = "blank"> <div class = "socialLinks" id = "instagram"> </div> </a>
+	<a href = "https://github.com/viordona" target = "blank"> <div class = "socialLinks" id = "github"> </div> </a>
+	<a href = "mailto:b2025viordona@pshs.edu.ph" target = "blank"> <div class = "socialLinks" id = "gmail"> </div> </a>
+	<p id = "rightText"> Contact Us! </p>
+</div>
+</header>
+
+<section>
+<div id = "customization">
+	<form id = "avatar">
+		<div id = "closeCustom" onclick = "closeCustom();"> X </div>
+		<div id = "customUser">
+			<div id = "gameUser">
+				<div id = "user">
+					<div id = "userBody">
+						<div id = "userHead">
+							<div class = "eyes" id = "leftEye"> </div>
+							<div class = "eyes" id = "rightEye"> </div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id = "customChoices">
+			<label for = "bgColor"> Background Color: </label>
+			<input type = "color" id = "bgColor" name = "bgColor" value = "#cde3ff" onfocus = "changeToGreen(this);"><br><br>
+			<label for = "headColor"> Head Color: </label>
+			<input type = "color" id = "headColor" name = "headColor" value = "#141849" onfocus = "changeToGreen(this);"><br><br>
+			<label for = "leftEyeColor:"> Left Eye Color: </label>
+			<input type = "color" id = "leftEyeColor" name = "leftEyeColor" value = "#cde3ff" onfocus = "changeToGreen(this);"><br><br>
+			<label for = "rightEyeColor"> Right Eye Color: </label>
+			<input type = "color" id = "rightEyeColor" name = "rightEyeColor" value = "#cde3ff" onfocus = "changeToGreen(this);"><br><br>
+			<label for = "bodyColor"> Body Color: </label>
+			<input type = "color" id = "bodyColor" name = "bodyColor" value="#141849" onfocus = "changeToGreen(this);"><br><br>
+			<label for = "username" id = "customName"></label>
+			<input type = "text" id = "username" class = "customRight" name = "username" value = "You" maxlength = "15" onfocus = "changeToGreen(this);" onblur = "changeToRed(this);"><br><br>
+			<input type = "submit" onclick = "temporary();" >
+			<input type = "reset" onclick = "changeToNormal();">
+		</div>
+	</form>
+</div>
+</section>
+
+
+<header>
+<div id = "title">
+	<h1 id = "moveToCenter"> Brain </h1>
+	<img id = "title" src = "../images/icons/brainRush.png" alt = "Brain Rush Logo"> </img>
+	<h1> Rush! </h1>
+</div>
+</header>
+
+<nav>
+<div id = "navigation">
+	<div class = "unfocused"> <a href = "../index.html"> Home </a> </div>
+	<div class = "unfocused"> <a href = "rules.html"> Rules </a> </div>
+	<div id = "focused"> <a href = "playNow.html"> Play Now! </a> </div>
+	<div class = "unfocused"> <a href = "leaderboard.html"> Leaderboard </a> </div>
+	<div class = "unfocused"> <a href = "resources.html"> Resources </a> </div>
+</div>
+</nav>
+
+<div id = "body"> 
+	<div id = "contentSquare">
+	
+		<!-- The two buttons below are uninished and may or may not be included in the final output. -->
+		<button id = "fullScreen" class = "gameScreen" onclick = "fullScreen();"> temporary </button>
+		<button id = "exitScreen" class = "gameScreen" onclick = "exitScreen();"> temporary </button>
+		
+		<div id = "mainScreen">
+			<img id = "gameBG" src = "../images/gameBackground.gif" alt = "Background GIF"> </img>
+			<h1 class = "gameText" id = "gameTitle"> Brain Rush </h1>
+			<p class = "gameText" id = "gameSubText"> Can you handle the rush? </p>
+			<button id = "start" onclick = "startGame();"> Ready </button>
+		</div>
+		
+		<img id = "levelConfetti" src = "../images/confetti1.gif" alt = "Confetti!!"> </img>
+		<img id = "levelConfetti2" src = "../images/confetti2.gif" alt = "Confetti!!"> </img>
+		<h1 id = "confettiHeader"> Congratulations! </h1>
+		<p id = "confettiText">	You won a total of: ₱ <span id = "moneyGained3">0 </span> </p> 
+		<a class = "confettiButtons" id = "confettiButton1" href = "leaderboard.html">Leaderboard</a>
+		<a class = "confettiButtons"id = "confettiButton2" href = "playNow.html">Exit</a> 
+	
+		<p id = "prepCountdown"> 5 </p>
+	
+		<div id = "gameInterface">
+			<div id = "gameHeader">
+				<div id = "gameUser">
+					<div id = "user">
+						<div id = "userBody">
+							<div id = "userHead">
+								<div class = "eyes" id = "leftEye"> </div>
+								<div class = "eyes" id = "rightEye"> </div>
+							</div>
+						</div>
+					</div>
+				</div>
+			<p class = "gameStats"> Answer Streak: <span id = "answerStreak"> 0 </span> </p>	
+			<p class = "gameStats"> Money: ₱ <span id = "moneyGained">0 </span> </p>
+			</div>
+			
+			<div id = "gameQuestion"> <p> <span id = "bold"> Question <span id = "questionNumber">1</span>: </span> <br> <br> <span id = "questionArea"> Many features and questions are still being made, and only Level 1 out of 3 is available. After completing Level 1, the game will end. Please click A if you want to proceed. Click any other choice, submit no answer, or wait for timer to end to receive a game over. </span> </p> </div>	
+			<div id = "gameMoney">
+				<p id = "gameLevel"> Level 1 </p>
+				<ul id = "moneyList">
+					<li id = "rewardMoney"> ₱ 1,000 </li>
+					<li id = "money4"> ₱ 500 </li>
+					<li id = "money3"> ₱ 300</li>
+					<li id = "money2"> ₱ 200</li>
+					<li id = "money" class = "moneyFocus"> ₱ 100</li>
+				</ul>
+			</div>
+
+			<div id = "gameTimer">
+				<p id = "timerCountdown"> 20 </p>
+				<div id = "timerFill"> </div>
+			</div>
+			<div id = "coverGameTimer"></div>
+			
+			<div id = "answerArea">
+				<div id = "coverForm"> </div>
+				
+				<form id = "form1" onsubmit = "return checkAnswer(this);">
+					<input type = "reset" id = "clearAnswer" value = "Clear Answer">
+					<input type = "radio" id = "fix" name = "choices" value = "wrong" checked>
+					
+					<div id = "totalChoices">
+						<div id = "gameChoice1" class = "allChoices"> 
+							<label for = "choice1">
+								<input type = "radio" id = "choice1" name = "choices" value = "correct"> 
+								<span class = "checkBox"></span> 
+								<span id = "choiceA"> Temporary A </span>
+							</label> 
+						</div>
+					
+						<div id = "gameChoice2" class = "allChoices"> 
+							<label for = "choice2" > 
+								<input type = "radio" id = "choice2" name = "choices" value = "wrong">
+								<span class = "checkBox"></span> 
+								<span id = "choiceB"> Temporary B </span> 
+							</label> 
+						</div>
+					
+						<div id = "gameChoice3" class = "allChoices"> 
+							<label for = "choice3" > 
+								<input type = "radio" id = "choice3" name = "choices" value = "wrong">
+								<span class = "checkBox"></span> 
+								<span id = "choiceC"> Temporary C </span>
+							</label> 
+						</div>
+					
+						<div id = "gameChoice4" class = "allChoices"> 
+							<label for = "choice4" > 
+								<input type = "radio" id = "choice4" name = "choices" value = "wrong"> 
+								<span class = "checkBox"></span>
+								<span id = "choiceD"> Temporary D </span> 
+							</label>
+						</div>
+					</div>
+					
+					<input type = "submit" id = "submitChoice" value = "Submit">
+					<div id = "coverSubmit"> <p> Submit </p> </div>
+					<div class = "gameControls" id = "next" onclick = "nextQuestion();"><input type = "reset" value = "→" id = "resetFix"> </div> 
+					<div class = "gameControls" id = "nextFix" onclick = "nextPage();"> <p> → </p> </div> 
+				</form>
+				
+				
+				<div class = "gameControls" id = "coverNext"> <p> → </p> </div> 
+				<div class = "gameControls" id = "previous" onclick = "previousPage();"> <p> ← </p> </div> 
+				<div class = "gameControls" id = "coverPrevious"> <p> ← </p> </div> 
+				</div>
+			</div>
+			
+				<div id = "levelCompleteScreen">
+					<h1> Level Complete! </h1>
+					<p class = "levelCompleteButtons" onclick = "summaryCongrats();"> End Now </p>
+					<p class = "levelCompleteButtons" onclick = "temporary();"> Continue </p>
+				</div>
+				
+				</div>
+				<div id = "gameOverScreen"> 
+					<h1> Game over! </h1>
+					<p class = "overStats" id = "adjust"> <span id = "bold"> Answer Streak: </span> <span id = "answerStreak2"> 0 </span> </p>
+					<p class = "overStats" id = "adjust2"> <span id = "bold"> Money: </span> ₱ <span id = "moneyGained2">0 </span> </p>
+					<a class = "endButtons" id = "adjust3" href = "leaderboard.html">Leaderboard</a>
+					<a class = "endButtons" href = "playNow.html">Exit</a>
+				</div>
+		</div>
+</div>
+
+<aside>
+<a href = "#"> 
+	<div id = "backToTop"> 
+		<img id = "arrow" src = "../images/icons/arrow.png" alt = "Back To Top"> </img> 
+	</div>
+</a>
+
+<div id = "sideButtonContainer">
+	<div class = "sideButton"> 
+		<a href = "https://www.discord.com/users/740143788831408159" target = "blank" class = "sideLink"> Questions & Suggestions </a> 
+		<img id = "sideDiscord" src = "../images/icons/discord.png" alt = "Discord Logo"> </img>
+	</div> 
+	
+	<div class = "sideButton"> 
+		<a href = "temporary" target = "blank" class = "sideLink"> View the Website's Code </a> 
+		<img id = "sideGithub" src = "../images/icons/github2.png" alt = "Discord Logo"> </img> 
+	</div>
+</div>
+</aside>
+
+<script src = "../script/playNow.js"></script>
+<script src = "../script/brainRush.js"></script>
+
+</body>
+</html>

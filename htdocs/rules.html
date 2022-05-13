@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Brain Rush </title>
+	<meta charset="UTF-8">
+	<meta name="author" content="ORDONA, Victoria Alexandra I.">
+	<meta name="keywords" content="Rules, Brain, Rush"> 
+	<meta name="revised" content="13-05-2022">
+	<link rel="icon" href="../images/icons/brainRush.png" type="image/png"> 
+	<link rel="stylesheet" type="text/css" href="../css/brainRush.css">
+</head>
+<body>
+
+<header>
+<div id = "header">
+	<div id = "user">
+		<div id = "userBody">
+			<div id = "userHead">
+				<div class = "eyes" id = "leftEye"> </div>
+				<div class = "eyes" id = "rightEye"> </div>
+			</div>
+		</div>
+	</div>
+
+	<p id = "leftText" onclick = "openCustom();"> Customize Your Avatar </p>
+	<a href = "https://www.facebook.com/victoria.ordona.501/" target = "blank"> <div class = "socialLinks" id = "facebook"> </div> </a>
+	<a href = "https://www.instagram.com/victxria.xrdxna/" target = "blank"> <div class = "socialLinks" id = "instagram"> </div> </a>
+	<a href = "https://github.com/viordona" target = "blank"> <div class = "socialLinks" id = "github"> </div> </a>
+	<a href = "mailto:b2025viordona@pshs.edu.ph" target = "blank"> <div class = "socialLinks" id = "gmail"> </div> </a>
+	<p id = "rightText"> Contact Us! </p>
+</div>
+</header>
+
+<section>
+<div id = "customization">
+	<form id = "avatar">
+		<div id = "closeCustom" onclick = "closeCustom();"> X </div>
+		<div id = "customUser">
+			<div id = "gameUser">
+				<div id = "user">
+					<div id = "userBody">
+						<div id = "userHead">
+							<div class = "eyes" id = "leftEye"> </div>
+							<div class = "eyes" id = "rightEye"> </div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id = "customChoices">
+			<label for = "bgColor"> Background Color: </label>
+			<input type = "color" id = "bgColor" name = "bgColor" value = "#cde3ff" onfocus = "changeToGreen(this);"><br><br>
+			<label for = "headColor"> Head Color: </label>
+			<input type = "color" id = "headColor" name = "headColor" value = "#141849" onfocus = "changeToGreen(this);"><br><br>
+			<label for = "leftEyeColor:"> Left Eye Color: </label>
+			<input type = "color" id = "leftEyeColor" name = "leftEyeColor" value = "#cde3ff" onfocus = "changeToGreen(this);"><br><br>
+			<label for = "rightEyeColor"> Right Eye Color: </label>
+			<input type = "color" id = "rightEyeColor" name = "rightEyeColor" value = "#cde3ff" onfocus = "changeToGreen(this);"><br><br>
+			<label for = "bodyColor"> Body Color: </label>
+			<input type = "color" id = "bodyColor" name = "bodyColor" value="#141849" onfocus = "changeToGreen(this);"><br><br>
+			<label for = "username" id = "customName"></label>
+			<input type = "text" id = "username" class = "customRight" name = "username" value = "You" maxlength = "15" onfocus = "changeToGreen(this);" onblur = "changeToRed(this);"><br><br>
+			<input type = "submit" onclick = "temporary();" >
+			<input type = "reset" onclick = "changeToNormal();">
+		</div>
+	</form>
+</div>
+</section>
+
+<header>
+<div id = "title">
+	<h1 id = "moveToCenter"> Brain </h1>
+	<img id = "title" src = "../images/icons/brainRush.png" alt = "Brain Rush Logo"> </img>
+	<h1> Rush! </h1>
+</div>
+</header>
+
+<nav>
+<div id = "navigation">
+	<div class = "unfocused"> <a href = "../index.html"> Home </a> </div>
+	<div id = "focused"> <a href = "rules.html"> Rules </a> </div>
+	<div class = "unfocused"> <a href = "playNow.html"> Play Now! </a> </div>
+	<div class = "unfocused"> <a href = "leaderboard.html"> Leaderboard </a> </div>
+	<div class = "unfocused"> <a href = "resources.html"> Resources </a> </div>
+</div>
+</nav>
+
+<section>
+<div id = "body"> 
+	<div id = "contentSquare"></div>
+</div>
+<section>
+
+<aside>
+<a href = "#"> 
+	<div id = "backToTop"> 
+		<img id = "arrow" src = "../images/icons/arrow.png" alt = "Back To Top"> </img> 
+	</div>
+</a>
+
+<div id = "sideButtonContainer">
+	<div class = "sideButton"> 
+		<a href = "https://www.discord.com/users/740143788831408159" target = "blank" class = "sideLink"> Questions & Suggestions </a> 
+		<img id = "sideDiscord" src = "../images/icons/discord.png" alt = "Discord Logo"> </img>
+	</div> 
+	
+	<div class = "sideButton"> 
+		<a href = "temporary" target = "blank" class = "sideLink"> View the Website's Code </a> 
+		<img id = "sideGithub" src = "../images/icons/github2.png" alt = "Discord Logo"> </img> 
+	</div>
+</div>
+</aside>
+
+<script src = "../script/brainRush.js"> </script>
+<script>
+alert("The rules page content and footer have not been made yet, and there are many features unavailable. Please proceed to the other pages.");
+</script>
+
+</body>
+</html>

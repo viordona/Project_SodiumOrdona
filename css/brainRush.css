@@ -1,0 +1,434 @@
+/* The way the code is split is similar to the site's format for easy viewing. */
+
+/* The code below is for the settings of the website as a whole */
+@font-face {
+	font-family: write;
+	src: url(../fonts/IWouldWriteItAll.ttf);
+}
+
+@font-face {
+	font-family: alloy;
+	src: url(../fonts/AlloyInk-nRLyO.ttf);
+}
+
+:root {
+	scroll-behavior: smooth;
+    background-size: 100%, 100px;
+	background-color: #5B6BF6;
+	background-image: linear-gradient(#272E84, #5B6BF6);
+	background-repeat: no-repeat;
+}
+
+/* The code below is for the header */
+#header {
+	z-index: 6;
+	position: fixed;
+	width: 100%;
+	height: 50px;
+	margin-top: -10px;
+	margin-left: -8px;
+	background-image: linear-gradient(to right, #010530, #141849);
+	transition: 0.7s;
+	overflow-y:auto;
+}
+
+#header:hover {
+	box-shadow: -4px -2px 20px 3px #010530;
+}
+
+#header p{
+	color: white;
+	font-family: write, georgia;
+}
+
+#leftText {
+	float: left;
+	margin-left: 10px;
+	transition: 0.4s;
+	cursor: pointer;
+}
+
+#leftText:hover {
+	text-decoration: underline;
+}
+
+#rightText {
+	float: right;
+	margin-right: 15px;
+}
+
+/* This section of the header code is for the user's avatar. Its functionality is still being worked on. */
+#user {
+	float: left;
+	width: 34px;
+	height: 33px;
+	margin-top: 9px;
+	margin-left: 10px;
+	border-radius: 11px;
+	background-color: #cde3ff;
+	transition: 0.5s;
+}
+
+#userHead {
+	position: relative;
+	width: 17.5px;
+	height: 17.5px;
+	bottom: 18.2px;
+	border-radius: 10px;
+	background-color: #141849;
+}
+
+.eyes {
+	position: relative;
+	float: left;
+	height: 3px;
+	width: 3px;
+	border-radius: 3px;
+	background-color: #cde3ff;
+}
+	
+#leftEye {
+	margin-top: 7px;
+	margin-left: 3.2px;
+}
+
+#rightEye {
+	margin-top: -3px;
+	margin-left: 11px;
+}
+
+#userBody {
+	position: relative;
+	height: 11.9px;
+	width: 18px;
+	margin-top: 21px;
+	margin-left: 8px;
+	border-top-right-radius: 6px;
+	border-top-left-radius: 6px;
+	border-bottom-left-radius: 1px;
+	border-bottom-right-radius: 1px;
+	background-color: #141849;
+	
+}
+
+#gameUser {
+	transform: scale(1.3);
+	float: left;
+	margin-top: -13px;
+	margin-left: 15px;
+}
+
+#customization {
+	z-index: 12;
+	position: fixed;
+	height: 300px;
+	width: 500px;
+	left: 50%;
+    top: 50%;
+	padding: 20px;
+	border-radius: 20px;
+	border: 4px solid #F6B332;
+    transform: translate(-50%, -50%);
+	color: #010530;
+	background-color: #fcc761;
+	font-family: write, georgia;
+	opacity: 0;
+	visibility: hidden;
+}
+
+#customChoices {
+	margin-left: 25px;
+}
+
+#customChoices > input {
+	border: 1px solid #010530;
+	border-radius: 2px;
+	color: #010530;
+	font-family: write, georgia;
+	cursor: pointer;
+}
+
+#customChoices > input[type="submit"], #customChoices > input[type="reset"], #customChoices > input[type="text"]{
+	padding: 5px;
+	transition: 0.4s;
+}
+
+#customChoices > input[type="submit"]:hover, #customChoices > input[type="reset"]:hover, #customChoices > input[type="text"]:hover{
+	background-color: #010530;
+	color: white;
+}
+
+#bgColor {
+	margin-top: 15px;
+}
+
+#customName {
+	display: block;
+	margin-left: 300px;
+	margin-top: -25px;
+	 
+}
+.customRight {
+	float: right;
+	width: 105px;
+	margin-top: -10px;
+	margin-right: 80px;	
+}
+
+#customUser {
+	float: right;
+	margin-top: 100px;
+	margin-right: 160px;
+	transform: scale(4);
+}
+
+#closeCustom {
+	width: 35px;
+	height: 35px;
+	margin-top: -35px;
+	margin-left: 495px;
+	border-radius: 40px;
+	background-color: #A81B1B;
+	color: white;
+	text-align: center;
+	font-size: 34px;
+	transition: 0.7s;
+	cursor: pointer;
+}
+
+#closeCustom:hover {
+	color: #A81B1B;
+	background-color: white;
+}
+
+/* The section of code below shows the code for the social links. */
+.socialLinks {
+	z-index: 6;
+	float: right;
+	width: 30px;
+	height: 30px;
+	margin-top: 11px;
+	margin-right: 15px;
+	background-size: 30px 30px;
+}
+
+#facebook {
+	background-image: url("../images/icons/facebook.png");
+	transition: 0.3s;
+}
+
+#facebook:hover {
+	background-image: url("../images/icons/facebookHover.png");
+}
+
+#instagram {
+	background-image: url("../images/icons/instagram.png");
+	transition: 0.3s;
+}
+
+#instagram:hover {
+	background-image: url("../images/icons/instagramHover.png");
+}
+
+#github {
+	background-image: url("../images/icons/github.png");
+	transition: 0.3s;
+}
+
+#github:hover {
+	background-image: url("../images/icons/githubHover.png");
+}
+
+#gmail {
+	background-image: url("../images/icons/gmail.png");
+	transition: 0.3s;
+}
+
+#gmail:hover {
+	background-image: url("../images/icons/gmailHover.png");
+}
+
+
+/* The code below is for the title of the website. It is the website's second header. */
+#title {
+	overflow: hidden;
+	width: 700px;
+	height: 160px;
+	margin: auto;
+	padding: 45px;
+}
+
+#title h1 {
+	color: #fcc761;
+	font-size: 60px;
+	float: left;
+	margin-top: 78px;
+	text-shadow: 2px 2px #A32523;
+	font-family: alloy, georgia;
+	
+}
+
+#moveToCenter {
+	margin-left: 50px;
+}
+
+#title img {
+	float: left;
+	width: 155px;
+	height: 140px;
+	
+}
+
+
+/* The code below is for the navigation. */
+#navigation {
+	z-index: 1;
+	position: relative;
+	width: 750px;
+	height: 70px;
+	margin: auto;
+}
+
+#navigation > div {
+	float: left;
+	border-radius: 35px;
+	width: 150px;
+	height: 113px;
+	margin-top: 29px;
+	transition: 0.3s;
+}
+
+#navigation > div:hover {
+	margin-top: 23px;
+}
+
+#navigation a {
+	display: block;
+	color: white;
+	margin-top: 11px;
+	text-align: center;
+	text-decoration: none;
+	font-family: write;
+	font-size: 21px;
+}
+
+.unfocused {
+	background-color: #141849;
+}
+
+.unfocused:hover{
+	background-color: #fcc761;
+}
+
+#focused {
+	background-color: #010530;
+}
+
+#focused > a{
+	color: #fcc761;
+}
+
+
+/* The code below styles the website's content. */
+#body {
+	z-index: 2;
+	position: relative;
+	border-radius: 35px;
+	border-top: 11px solid #010530;
+	width: 750px;
+	height: 436px;
+	margin: auto;
+	background-color: #272E84;
+}
+
+#contentSquare {
+	clear: both;
+	z-index: 3;
+	border-radius: 35px;
+	width: 700px;
+	height: 350px;
+	margin-top: 25px;
+	margin-bottom: 100px;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: #cde3ff;
+}
+
+
+/* This part of the code styles all the elements found at the website's sides. */
+/* The back to top button code is found in this section. */
+#backToTop {
+	z-index: 6;
+	position: fixed;
+	border-radius: 7px;
+	width: 50px;
+	height: 50px;
+	bottom: 10px;
+	right: 20px;
+	background-color: #010530;
+	opacity: 0.8;
+	transition: 0.5s;
+}
+
+#backToTop:hover {
+	opacity: 1;
+}
+
+#arrow {
+	width: 35px;
+	margin-top: 13.5px;
+	margin-left: 7px;
+	
+}
+
+/* The side button code is found in this section. */
+#sideButtonContainer {
+	z-index: 6;
+	position: fixed;
+	width: 430px;
+	height: 100px;
+	margin-top: -670px;
+	left: -205px;
+}
+
+.sideButton {
+	border-radius: 15px;
+	width: 250px;
+	height: 35px;
+	margin-top: 10px;
+	background-color: #010530;
+	opacity: 0.8;
+	transition: 1.1s;
+}
+
+.sideButton:hover {
+	opacity: 1;
+	margin-left: 175px;
+}
+
+.sideLink {
+	float: left;
+	margin-top: 9px;
+	color: white;
+	text-indent: 35px;
+	text-decoration: none;
+	font-size: 14.75px;
+	font-family: write, georgia;
+}
+
+.sideLink:hover {
+	text-decoration: underline;
+}
+
+#sideDiscord {
+	width: 30px;
+	margin-top: 2px;
+	margin-left: 8.3px;
+}
+
+#sideGithub {
+	width: 27px;
+	margin-top: 4px;
+	margin-left: 13px;
+}
+
