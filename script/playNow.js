@@ -197,14 +197,6 @@ function pageCheck() {
 		questionArea.innerHTML = questions[counter];
 	}
 		
-	if (counter == 0) {
-		coverPrevious.style.transition = "1s";
-		coverPrevious.style.opacity = "1";
-		coverPrevious.style.visibility = "visible";
-		previous.style.transition = "1s";
-		previous.style.opacity = "0";
-		previous.style.visibility = "hidden";
-	}
 	
 	if (counter == questionPosition) {
 		coverNext.style.transition = "1s";
@@ -223,6 +215,15 @@ function pageCheck() {
 		nextFix.style.visibility = "visible";
 		disableFix.style.visibility = "visible";
 		disableFixSubmit.style.visibility = "visible";
+	}
+	
+	if (counter == 0) {
+		coverPrevious.style.transition = "1s";
+		coverPrevious.style.opacity = "1";
+		coverPrevious.style.visibility = "visible";
+		previous.style.transition = "1s";
+		previous.style.opacity = "0";
+		previous.style.visibility = "hidden";
 	}
 	
 	if (questionPosition == 6) {
