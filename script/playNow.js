@@ -217,15 +217,6 @@ function pageCheck() {
 		disableFixSubmit.style.visibility = "visible";
 	}
 	
-	if (counter == 0) {
-		coverPrevious.style.transition = "1s";
-		coverPrevious.style.opacity = "1";
-		coverPrevious.style.visibility = "visible";
-		previous.style.transition = "1s";
-		previous.style.opacity = "0";
-		previous.style.visibility = "hidden";
-	}
-	
 	if (questionPosition == 6) {
 		coverPrevious.style.transition = "1s";
 		coverPrevious.style.opacity = "0";
@@ -233,6 +224,15 @@ function pageCheck() {
 		previous.style.transition = "1s";
 		previous.style.opacity = "1";
 		previous.style.visibility = "visible";
+	}
+	
+	if (counter == 0) {
+		coverPrevious.style.transition = "1s";
+		coverPrevious.style.opacity = "1";
+		coverPrevious.style.visibility = "visible";
+		previous.style.transition = "1s";
+		previous.style.opacity = "0";
+		previous.style.visibility = "hidden";
 	}
 }
 
